@@ -1,0 +1,13 @@
+<h1>My tasks</h1>
+
+<% if @task.completed? %>
+<input type="checkbox" checked>
+<% else %>
+<input type="checkbox">
+<% end %>
+<%= @task.title %>
+<p>
+  <%= @task.details %>
+</p>
+
+<%= link_to "Revenir à l'index", tasks_path %>

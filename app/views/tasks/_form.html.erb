@@ -1,0 +1,13 @@
+<%= simple_form_for(@task) do |f| %>
+
+  <%= f.input :title, autofocus: true %>
+  <%= f.input :details %>
+
+  <% unless @task.new_record? %>
+    <%= f.input :completed %>
+  <% end %>
+
+<%= link_to "Revenir à l'index", tasks_path, class: 'button' %>
+  <%= f.submit 'Editer', class: "btn btn-primary" %>
+<% end %>
+
